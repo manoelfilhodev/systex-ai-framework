@@ -18,6 +18,107 @@ Beneficios esperados:
 - Decisoes tecnicas rastreaveis e orientadas por impacto.
 - Ciclo de release mais previsivel, com qualidade e confiabilidade.
 
+## 🚀 Fluxo Oficial de Inicialização de Projetos
+
+Todo novo projeto deve seguir a sequência abaixo:
+
+### 1. Criar projeto a partir do template
+Use o repositório `systex-ai-framework` como base.
+
+---
+
+### 2. Executar ATLAS (orquestração)
+
+Definir:
+- visão geral
+- módulos
+- sequência de execução
+
+---
+
+### 3. ATHENA (regras de negócio)
+Definir:
+- regras de uso
+- cenários de erro
+- critérios de aceite
+
+---
+
+### 4. PROMETEU (arquitetura)
+Definir:
+- arquitetura geral
+- módulos
+- fluxos
+
+---
+
+### 5. GAIA (banco de dados)
+Definir:
+- modelagem
+- relacionamentos
+- integridade
+
+Salvar em:
+docs/database/
+
+---
+
+### 6. VULCAN (estrutura base)
+Definir:
+- estrutura Laravel
+- estrutura Flutter
+- organização do projeto
+
+Salvar em:
+docs/architecture/
+
+---
+
+### 7. PROMETEU (API)
+Definir:
+- endpoints
+- contratos
+- erros
+
+Salvar em:
+docs/api/
+
+---
+
+### 8. INICIAR CÓDIGO
+
+Agora sim:
+- backend (ARES)
+- frontend admin (APOLLO)
+- mobile (HERMES)
+
+---
+
+### 9. VALIDAÇÃO
+
+- ORION → testes
+- HADES → segurança
+
+---
+
+## ⚠️ Regra principal
+
+Nenhum código deve ser escrito antes de:
+- regras
+- arquitetura
+- banco
+- API
+
+---
+
+## 🎯 Objetivo
+
+Garantir:
+- previsibilidade
+- qualidade
+- escalabilidade
+- padrão Systex
+
 ## Estrutura de Pastas
 
 ```text
