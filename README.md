@@ -1,60 +1,127 @@
 # systex-ai-framework
 
-Framework operacional para times de engenharia que usam agentes de IA especializados para planejar, construir, validar e operar software com padrão profissional.
+> Framework de agentes de IA para engenharia de software da Systex.
 
-## O que é
+Um framework operacional para planejar, construir, validar e operar produtos digitais com padrao de producao. O foco e transformar IA em um sistema de trabalho real: com papeis claros, handoff objetivo, criterio tecnico e governanca de entrega.
 
-`systex-ai-framework` define:
+## Visao Geral
 
-- Um orquestrador central (`ATLAS`) para coordenar decisões.
-- Um conjunto de agentes especialistas com responsabilidades claras.
-- Prompts rápidos para tarefas críticas de engenharia.
-- Templates de kickoff e handoff para reduzir perda de contexto.
+`Systex AI Framework` organiza engenharia em tres camadas:
 
-O objetivo é permitir execução consistente em projetos reais, com rastreabilidade técnica, qualidade e segurança desde o início.
+- **Orquestracao**: ATLAS coordena prioridade, risco e sequenciamento.
+- **Especializacao**: agentes com ownership tecnico por dominio.
+- **Execucao**: prompts e templates para reduzir ambiguidade e acelerar entrega.
 
-## Estrutura
+Beneficios esperados:
 
-- `atlas/`: definição e prompt mestre do orquestrador.
-- `agents/`: contratos operacionais de cada agente.
-- `prompts/`: comandos curtos para acionar trilhas especializadas.
-- `templates/`: documentos padrão de início e transição de trabalho.
+- Menos retrabalho entre arquitetura, backend, frontend, QA e seguranca.
+- Decisoes tecnicas rastreaveis e orientadas por impacto.
+- Ciclo de release mais previsivel, com qualidade e confiabilidade.
 
-## Como usar
+## Estrutura de Pastas
 
-1. Copie esta estrutura para o repositório do projeto.
-2. Preencha `templates/project-start.md` com contexto de negócio e restrições.
-3. Use `atlas/atlas-prompt.txt` como prompt principal do orquestrador.
-4. Acione agentes por necessidade técnica com os comandos em `prompts/*.txt`.
-5. Formalize entregas com os templates de handoff.
+```text
+systex-ai-framework/
+|- README.md
+|- atlas/
+|  |- atlas.md
+|  |- atlas-prompt.txt
+|- agents/
+|  |- athena.md
+|  |- prometeu.md
+|  |- gaia.md
+|  |- vulcan.md
+|  |- ares.md
+|  |- apollo.md
+|  |- hermes.md
+|  |- orion.md
+|  |- hades.md
+|- prompts/
+|  |- atlas-master.txt
+|  |- db.txt
+|  |- backend.txt
+|  |- frontend.txt
+|  |- qa.txt
+|  |- security.txt
+|- templates/
+   |- project-start.md
+   |- handoff-db.md
+   |- handoff-backend.md
+   |- handoff-frontend.md
+```
 
-## Fluxo de trabalho com agentes
+## Agentes do Framework
 
-1. **Kickoff**
-   - `ATLAS` consolida escopo, riscos, dependências e plano de execução.
-2. **Arquitetura e decomposição**
-   - `ATHENA` define arquitetura e contratos.
-   - `PROMETEU` quebra backend em incrementos.
-   - `GAIA` conduz interface, UX e integração com APIs.
-3. **Construção e validação**
-   - `VULCAN` prepara CI/CD, ambientes e automação.
-   - `APOLLO` valida qualidade com testes e critérios de aceite.
-   - `ARES` revisa segurança de ponta a ponta.
-4. **Entrega e operação**
-   - `ORION` instrumenta observabilidade e SLOs.
-   - `HERMES` consolida documentação e handoffs.
-   - `HADES` cobre riscos operacionais, conformidade e resposta a incidentes.
-5. **Governança contínua**
-   - `ATLAS` monitora desvios, prioriza trade-offs e redefine próximos passos.
+| Agente | Papel principal | Entrega chave |
+|---|---|---|
+| **ATLAS** | Orquestracao tecnica | Plano por fases, governanca de risco e alinhamento entre agentes |
+| **PROMETEU** | Backend e dominio | APIs, regras de negocio, persistencia e integracoes |
+| **ATHENA** | Arquitetura | Decisoes estruturais, boundaries e trade-offs tecnicos |
+| **GAIA** | Frontend e UX | Fluxos de interface, componentes e integracao UI/API |
+| **VULCAN** | Plataforma e DevOps | CI/CD, ambientes, automacao e estrategia de deploy |
+| **ARES** | Seguranca | Threat modeling, controles e remediacao priorizada |
+| **APOLLO** | Qualidade | Estrategia de testes, evidencia e go/no-go de release |
+| **HERMES** | Documentacao e handoff | Transferencia de contexto com padrao tecnico |
+| **ORION** | Observabilidade e SRE | SLI/SLO, monitoramento, alertas e runbooks |
+| **HADES** | Continuidade e incidentes | Risco operacional, contingencia e resposta a incidentes |
 
-## Princípios de execução
+## Comandos Rapidos
 
-- Responsabilidade explícita por agente.
-- Decisões sempre com contexto técnico e impacto.
-- Entrega incremental com verificação objetiva.
-- Segurança, qualidade e operação tratadas como requisitos de produto.
+Use os atalhos abaixo no seu orquestrador/pipeline de prompts:
 
-## Resultado esperado
+| Comando | Finalidade | Status |
+|---|---|---|
+| `/arch` | Direcionar decisoes de arquitetura (ATHENA + ATLAS) | Definido no fluxo |
+| `/biz` | Refinar contexto de negocio e criterio de sucesso | Definido no fluxo |
+| `/db` | Modelagem e estrategia de dados | Disponivel (`prompts/db.txt`) |
+| `/be` | Design e execucao backend | Disponivel (`prompts/backend.txt`) |
+| `/fe` | Design e execucao frontend | Disponivel (`prompts/frontend.txt`) |
+| `/mobile` | Estrategia de cliente mobile e integracao | Definido no fluxo |
+| `/qa` | Planejamento e validacao de qualidade | Disponivel (`prompts/qa.txt`) |
+| `/sec` | Analise e remediacao de seguranca | Disponivel (`prompts/security.txt`) |
 
-Um ciclo de engenharia repetível, auditável e pronto para produção, sem depender de improviso entre áreas.
+## Fluxo de Trabalho
 
+1. **Kickoff do projeto**
+   - Preencha `templates/project-start.md` com objetivo, escopo, restricoes e NFRs.
+2. **Orquestracao inicial com ATLAS**
+   - Use `atlas/atlas-prompt.txt` para gerar plano tecnico faseado.
+3. **Execucao por especialidade**
+   - Acione agentes por dominio (`/db`, `/be`, `/fe`, `/qa`, `/sec`).
+4. **Handoffs formais**
+   - Registre entregas em `templates/handoff-*.md` para continuidade sem perda de contexto.
+5. **Confiabilidade e operacao**
+   - Validar observabilidade (ORION), riscos operacionais (HADES) e readiness de release.
+
+## Como Usar
+
+### 1) Preparar o contexto
+
+- Defina problema, objetivo de negocio e metricas de sucesso.
+- Liste restricoes reais: prazo, stack, equipe e compliance.
+
+### 2) Rodar a orquestracao
+
+- Inicialize com o prompt mestre de ATLAS.
+- Revise plano por fases, riscos e criterios de aceite.
+
+### 3) Executar por trilhas
+
+- Use prompts especializados para cada frente tecnica.
+- Mantenha evidencias tecnicas por etapa (testes, logs, metricas, ADRs).
+
+### 4) Fechar ciclo de entrega
+
+- Gere handoff tecnico.
+- Rode checklist de qualidade, seguranca e operacao antes do go-live.
+
+## Proximos Passos
+
+- **Padronizar comandos faltantes**: adicionar prompts dedicados para `/arch`, `/biz` e `/mobile`.
+- **Integrar com CI**: automatizar validacoes de qualidade e seguranca no pipeline.
+- **Evoluir playbooks**: ampliar templates de incidente, rollback e revisao pos-release.
+- **Medir maturidade**: acompanhar lead time, taxa de falha de release e MTTR como KPI do framework.
+
+## Posicionamento Systex
+
+Este repositorio foi desenhado para times que precisam de uma operacao de engenharia com ritmo de produto SaaS e disciplina de producao: decisao tecnica clara, responsabilidade distribuida e entrega confiavel.
