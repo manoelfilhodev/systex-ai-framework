@@ -104,26 +104,6 @@ standards/   → regras técnicas obrigatórias
 
 ---
 
-# ⚔️ Relação Conceitual Estratégica
-
-```text
-ATLAS → estratégia / direção / orquestração
-
-TITAN → operação / implantação / execução / entrega
-```
-
-ATLAS pensa.
-
-TITAN executa.
-
-ATLAS decide.
-
-TITAN entrega.
-
-Essa separação fortalece toda a estrutura enterprise da Systex.
-
----
-
 # 🚀 Fluxo Oficial de Inicialização de Projetos
 
 ## Este fluxo é obrigatório
@@ -131,36 +111,126 @@ Essa separação fortalece toda a estrutura enterprise da Systex.
 Todo novo projeto deve seguir exatamente esta ordem:
 
 ```text
-1. ATLAS
-→ Orquestração
-
-2. ATHENA
-→ Regras de negócio
-
-3. PROMETEU
-→ Arquitetura
-
-4. GAIA
-→ Banco de dados
-
-5. VULCAN
-→ Estrutura base
-
-6. PROMETEU
-→ Contratos e API
-
-7. ARES / APOLLO / HERMES
-→ Início da execução
-
-8. ORION / HADES
-→ Validação técnica
-
-9. CRONOS / MERCURIUS / AURORA / THEMIS
-→ Sustentação empresarial
-
-10. TITAN
-→ Implantação / Operação / Entrega / Pós-venda
+1. ATLAS      → Orquestração
+2. ATHENA     → Regras de negócio
+3. PROMETEU   → Arquitetura
+4. GAIA       → Banco de dados
+5. VULCAN     → Estrutura base
+6. PROMETEU   → Contratos e API
+7. ARES / APOLLO / HERMES → Início da execução
+8. ORION / HADES → Validação técnica
+9. CRONOS / MERCURIUS / AURORA / THEMIS → Sustentação empresarial
+10. TITAN → Implantação / Operação / Entrega / Pós-venda
 ```
+
+Quebrar essa ordem gera:
+
+* retrabalho
+* dívida técnica
+* perda de previsibilidade
+* risco operacional
+* custo invisível
+
+---
+
+# 🔒 Non-Negotiables
+
+## Regras que não são opcionais
+
+### ❌ Não iniciar código antes de:
+
+* regras de negócio
+* arquitetura
+* banco de dados
+* contratos de API
+
+---
+
+### ❌ Não criar tabelas sem validação da GAIA
+
+Banco de dados não nasce improvisado.
+
+---
+
+### ❌ Não abrir endpoints sem contrato definido
+
+API sem contrato gera caos.
+
+---
+
+### ❌ Não entregar sem ORION + HADES
+
+Sem teste e segurança, não existe entrega.
+
+---
+
+### ❌ Não considerar projeto iniciado sem documentação
+
+Se não está documentado:
+
+# ainda não existe.
+
+---
+
+# 🧠 Como Utilizar
+
+## Etapa 1
+
+Criar novo projeto utilizando este repositório como base.
+
+---
+
+## Etapa 2
+
+Abrir no ambiente de execução (Codex / Prometeu / ambiente local).
+
+---
+
+## Etapa 3
+
+Executar os agentes na ordem oficial.
+
+---
+
+## Etapa 4
+
+Gerar documentação obrigatória.
+
+---
+
+## Etapa 5
+
+Somente após isso iniciar desenvolvimento.
+
+---
+
+# 📈 Benefícios Reais
+
+* redução drástica de retrabalho
+* clareza estrutural
+* previsibilidade de entrega
+* padronização entre projetos
+* escalabilidade operacional
+* onboarding mais rápido
+* uso eficiente de IA
+* menor dependência de improviso
+* qualidade empresarial
+
+---
+
+# 🏁 Posicionamento
+
+A Systex não vende apenas software.
+
+A Systex entrega engenharia.
+
+Não construímos sistemas no improviso.
+
+Construímos com método.
+
+Construímos com estrutura.
+
+Construímos com responsabilidade.
 
 ---
 
