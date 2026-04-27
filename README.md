@@ -84,18 +84,22 @@ standards/   → regras técnicas obrigatórias
 
 # 🧠 Agentes Oficiais da Systex
 
-| Agente       | Função                            |
-| ------------ | --------------------------------- |
-| 👑 ATLAS     | Orquestração e direção do projeto |
-| 🧠 ATHENA    | Regras de negócio                 |
-| 🏗️ PROMETEU | Arquitetura                       |
-| 🗄️ GAIA     | Banco de dados                    |
-| ⚙️ VULCAN    | Estrutura base                    |
-| 🔴 ARES      | Backend / API                     |
-| 🎨 APOLLO    | Frontend / Admin                  |
-| 📱 HERMES    | Mobile / Flutter                  |
-| 🧪 ORION     | Testes                            |
-| 🛡️ HADES    | Segurança                         |
+| Agente       | Função                                |
+| ------------ | ------------------------------------- |
+| 👑 ATLAS     | Orquestração e direção do projeto     |
+| 🧠 ATHENA    | Regras de negócio                     |
+| 🏗️ PROMETEU | Arquitetura                           |
+| 🗄️ GAIA     | Banco de dados                        |
+| ⚙️ VULCAN    | Estrutura base                        |
+| 🔴 ARES      | Backend / API                         |
+| 🎨 APOLLO    | Frontend / Admin                      |
+| 📱 HERMES    | Mobile / Flutter                      |
+| 🧪 ORION     | Testes                                |
+| 🛡️ HADES    | Segurança                             |
+| 💰 CRONOS    | Financeiro / MRR / Viabilidade        |
+| 📈 MERCURIUS | Comercial / CRM / Vendas              |
+| 🎯 AURORA    | Marketing / Branding / Posicionamento |
+| ⚖️ THEMIS    | Jurídico / Contratos / SLA            |
 
 ---
 
@@ -106,14 +110,15 @@ standards/   → regras técnicas obrigatórias
 Todo novo projeto deve seguir exatamente esta ordem:
 
 ```text
-1. ATLAS   → Orquestração
-2. ATHENA  → Regras de negócio
-3. PROMETEU → Arquitetura
-4. GAIA    → Banco de dados
-5. VULCAN  → Estrutura base
-6. PROMETEU → Contratos e API
+1. ATLAS      → Orquestração
+2. ATHENA     → Regras de negócio
+3. PROMETEU   → Arquitetura
+4. GAIA       → Banco de dados
+5. VULCAN     → Estrutura base
+6. PROMETEU   → Contratos e API
 7. ARES / APOLLO / HERMES → Início da execução
-8. ORION / HADES → Validação final
+8. ORION / HADES → Validação técnica
+9. CRONOS / MERCURIUS / AURORA / THEMIS → Sustentação empresarial
 ```
 
 Quebrar essa ordem gera:
@@ -230,5 +235,3 @@ Construímos com responsabilidade.
 # Assinatura
 
 ## Systex Sistemas Inteligentes
-
-### Engenharia com método. Tecnologia com direção.
